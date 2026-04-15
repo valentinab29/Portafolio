@@ -3,24 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proyecto | ValStudio</title>
-<link rel="stylesheet" href="case.css">
+<title>Template</title>
+<link rel="stylesheet" href="../Estilos/template.css">
 </head>
 
 <body>
-
 <header>
 
 <h2 class="logo">ValStudio</h2>
 
 <nav>
-<a href="#">Sobre mí</a>
-<a href="#">Servicios</a>
-<a href="#">Portafolio</a>
-<a href="#">Blog</a>
+  <a href="../Home/home.html">Inicio</a>
+  <a href="../Aboutme/aboutme.html">Sobre mí</a>
+  <a href="../Template/template.html">Proyectos</a>
+  <a href="#footer">Contacto</a>
 </nav>
 
-<button class="btn-primary">Trabajemos</button>
+<button class="btn-primary" onclick="location.href='#footer'">
+  Trabajemos
+</button>
 
 </header>
 
@@ -42,7 +43,7 @@ la narrativa visual y la creación de una producción.
 <div class="hero-buttons">
 
 <button class="btn-primary">Ver proyecto</button>
-<button class="btn-outline">Ver proceso</button>
+<button class="btn-outline" onclick="location.href='#proceso'">Ver proceso</button>
 
 </div>
 
@@ -177,17 +178,17 @@ logrando una conexión más fuerte con el público y una presentación más sól
 
 
 
-<section class="process">
+<section class="proceso" id="proceso">
 
 <h2>Proceso creativo</h2>
 
-<p class="process-sub">
+<p class="proceso-sub">
 Desde investigación hasta diseño final.
 </p>
 
-<div class="process-grid">
+<div class="proceso-grid">
 
-<div class="process-card">
+<div class="proceso-card">
 
 <img src="#">
 
@@ -197,7 +198,7 @@ Desde investigación hasta diseño final.
 
 </div>
 
-<div class="process-card">
+<div class="proceso-card">
 
 <img src="#">
 
@@ -207,7 +208,7 @@ Desde investigación hasta diseño final.
 
 </div>
 
-<div class="process-card">
+<div class="proceso-card">
 
 <img src="#">
 
@@ -256,25 +257,25 @@ Desde investigación hasta diseño final.
 
   
   
-
 <footer class="footer" id="footer">
 
-    <nav class="footer-nav">
-        <a href="#about">Sobre mí</a>
-        <a href="#services">Servicios</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#">Blog</a>
-    </nav>
-    <h2 class="footer-logo">Val<span>Studio</span></h2>
+  <div class="footer-container">
 
-    <p class="footer-text">Sígueme en mis redes</p>
-
-    <div class="social-icons">
-        <a href="https://www.instagram.com/val_creadoradigital/">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">YouTube</a>
-        <a href="#">LinkedIn</a>
+    <div class="footer-brand">
+      <h2>Val<span>Studio</span></h2>
+      <p>Creando experiencias digitales con estrategia, diseño y emoción.</p>
     </div>
+
+    <div class="footer-contact">
+      <p>📧 dannavalentina0719@gmail.com</p>
+      <p>📍 Colombia</p>
+    </div>
+
+    <div class="footer-copy">
+      <p>© 2026 ValStudio. Todos los derechos reservados.</p>
+    </div>
+
+  </div>
 
 </footer>
 

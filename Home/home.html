@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Val - Creadora Digital</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="../Estilos/home.css">
 </head>
 <body>
 
@@ -10,14 +11,15 @@
     <h2 class="logo">ValStudio</h2>
 
     <nav>
-        <a href="#about">Sobre mí</a>
-        <a href="#services">Servicios</a>
-        <a href="#portafolio">Mi Portafolio</a>
-        <a href="#contact">Contacto</a>
-      
-    </nav>
+  <a href="../Home/home.html">Inicio</a>
+  <a href="../Aboutme/aboutme.html">Sobre mí</a>
+  <a href="../Template/template.html">Proyectos</a>
+  <a href="#footer">Contacto</a>
+</nav>
 
-    <button class="btn-primary">Trabajemos</button>
+    <button class="btn-primary" onclick="location.href='#footer'">
+  Trabajemos
+</button>
 </header>
 
 <section class="hero">
@@ -33,8 +35,8 @@
         </p>
 
         <div class="buttons">
-            <button class="btn-primary">Ver Portafolio</button>
-            <button class="btn-outline">Mis Servicios</button>
+            <button class="btn-primary" onclick="location.href='#portafolio'">Ver Portafolio</button>
+            <button class="btn-outline" onclick="location.href='#services'">Mis Servicios</button>
         </div>
     </div>
 
@@ -176,7 +178,6 @@
 
     </div>
 
-  </div>
 
 <section class="testimonios" id="testimonios">
   <h2>Testimonios</h2>
@@ -219,9 +220,9 @@
       <br> <br>
       <div class="social-media">
         <a href="https://www.instagram.com/val_creadoradigital/">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">YouTube</a>
-        <a href="#">LinkedIn</a>
+        <a href="https://www.tiktok.com/@dnna.vntna">TikTok</a>
+        <a href="https://www.youtube.com/@dnnavntna">YouTube</a>
+        <a href="https://www.linkedin.com/in/valentina-bola%C3%B1os-741900319/">LinkedIn</a>
     </div>
     </div>
     <form class="contact-form">
@@ -236,29 +237,25 @@
 
 
 
-
-
-
-
-
 <footer class="footer" id="footer">
 
-    <nav class="footer-nav">
-        <a href="#about">Sobre mí</a>
-        <a href="#services">Servicios</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#">Blog</a>
-    </nav>
-    <h2 class="footer-logo">Val<span>Studio</span></h2>
+  <div class="footer-container">
 
-    <p class="footer-text">Sígueme en mis redes</p>
-
-    <div class="social-icons">
-        <a href="https://www.instagram.com/val_creadoradigital/">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">YouTube</a>
-        <a href="#">LinkedIn</a>
+    <div class="footer-brand">
+      <h2>Val<span>Studio</span></h2>
+      <p>Creando experiencias digitales con estrategia, diseño y emoción.</p>
     </div>
+
+    <div class="footer-contact">
+      <p>📧 dannavalentina0719@gmail.com</p>
+      <p>📍 Colombia</p>
+    </div>
+
+    <div class="footer-copy">
+      <p>© 2026 ValStudio. Todos los derechos reservados.</p>
+    </div>
+
+  </div>
 
 </footer>
 
