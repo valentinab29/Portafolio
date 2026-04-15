@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #f3e8ff;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #f3e8ff;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #3a0ca3;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #222;  
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    border: none;
+    background-color: #7209b7;
+    color: white;
+    cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background-color: purple;
+}
+.btn-outline {
+    padding: 10px 20px;
+    border: 2px solid #7209b7;
+    background: transparent;
+    color: #7209b7;
+    cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-outline:hover {
+  background-color: #D0B9EB;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.hero-text {
+    flex: 1;
+   text-align: right; 
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.hero-text span {
+    color: #7209b7;
+}
+
+.description {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.hero-image img {
+    width: 350px;
+    max-width: 400px;
+    border-radius: 15px;
+}
+.about-skills {
+  background: #D0B9EB;
+  padding: 80px 10%;
+}
+
+.container {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.philosophy,
+.skills {
+  flex: 1;
+}
+
+.philosophy h2,
+.skills h2 {
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.stats h3 {
+  color: #7b2cbf;
+  font-size: 28px;
+  margin: 0;
+}
+.skill {
+  margin-bottom: 20px;
+}
+
+.bar {
+  background: #ddd;
+  height: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar span {
+  display: block;
+  height: 100%;
+  background: #7b2cbf;
+  }
+.contact {
+  background: white;
+  padding: 80px 10%;
+}
+
+.contact-container {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.social-media a {
+  padding: 10px 20px;
+    border: 2px solid #7209b7;
+    background: #D0B9EB;
+    color: black;
+    cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.social-media a:hover {
+  background-color: purple;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #D0B9EB;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  background: #953FE5;
+  color: white;
+  cursor: pointer;
+}
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer-nav {
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.footer-nav a:hover {
+    color: #7209b7;
+}
+
+.footer-logo {
+    font-size: 24px;
+    margin: 20px 0;
+    color: white;
+}
+
+.footer-logo span {
+    color: #7209b7;
+}
+
+.footer-text {
+    margin-bottom: 15px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.social-icons a:hover {
+    color: #7209b7;
+}
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 30px;
+  }
+
+  .hero {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .hero-image img {
+    width: 250px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .stats div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
