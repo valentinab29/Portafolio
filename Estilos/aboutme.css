@@ -2,28 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+
+body {
+    background: linear-gradient(135deg, #f3e8ff, #e0c3fc, #f3e8ff);
+    background-size: 200% 200%;
+    animation: bgMove 12s ease infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 img {
   max-width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 img:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
-body {
-    background-color: #f3e8ff;
-}
-
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: #f3e8ff;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.6);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .logo {
@@ -35,9 +48,10 @@ header {
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #222;  
+    color: #222;
     position: relative;
 }
+
 nav a::after {
   content: "";
   position: absolute;
@@ -52,36 +66,39 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
+
 .btn-primary {
     padding: 10px 20px;
     border: none;
-    background-color: #7209b7;
+    background: linear-gradient(135deg, #7209b7, #9d4edd);
     color: white;
     cursor: pointer;
-  border-radius: 6px;
-  transition: 0.3s;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(114,9,183,0.4);
 }
+
 .btn-primary:hover {
-  background-color: purple;
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(114,9,183,0.6);
 }
+
 .btn-outline {
     padding: 10px 20px;
     border: 2px solid #7209b7;
     background: transparent;
     color: #7209b7;
     cursor: pointer;
-  border-radius: 6px;
-  transition: 0.3s;
-
+    border-radius: 8px;
+    transition: 0.3s;
 }
+
 .btn-outline:hover {
-  background-color: #D0B9EB;
+  background: #7209b7;
+  color: white;
   transform: scale(1.05);
 }
-.card:hover {
-  transform: translateY(-8px);
-}
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -91,18 +108,12 @@ nav a:hover::after {
 
 .hero-text {
     flex: 1;
-   text-align: right; 
-}
-
-.subtitle {
-    color: #555;
-    margin-bottom: 10px;
+    text-align: right;
 }
 
 .hero-text h1 {
     font-size: 45px;
     margin-bottom: 20px;
-    color: #222;
 }
 
 .hero-text span {
@@ -111,14 +122,12 @@ nav a:hover::after {
 
 .description {
     margin-bottom: 20px;
-    color: #444;
 }
 
 .hero-image img {
     width: 350px;
-    max-width: 400px;
-    border-radius: 15px;
 }
+
 .about-skills {
   background: #D0B9EB;
   padding: 80px 10%;
@@ -135,37 +144,52 @@ nav a:hover::after {
   flex: 1;
 }
 
-.philosophy h2,
-.skills h2 {
-  margin-bottom: 20px;
-}
-
 .stats {
   display: flex;
   gap: 40px;
   margin-top: 30px;
 }
 
+.stats div {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.stats div:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
 .stats h3 {
   color: #7b2cbf;
   font-size: 28px;
-  margin: 0;
 }
+
 .skill {
   margin-bottom: 20px;
 }
 
 .bar {
-  background: #ddd;
-  height: 10px;
-  border-radius: 4px;
+  background: rgba(0,0,0,0.1);
+  height: 12px;
+  border-radius: 50px;
   overflow: hidden;
 }
+
 .bar span {
   display: block;
   height: 100%;
-  background: #7b2cbf;
-  }
+  border-radius: 50px;
+  background: linear-gradient(270deg, #7209b7, #9d4edd, #c77dff);
+  background-size: 200% 200%;
+  animation: moveGradient 3s ease infinite;
+}
+
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .contact {
   background: white;
   padding: 80px 10%;
@@ -177,44 +201,29 @@ nav a:hover::after {
   flex-wrap: wrap;
 }
 
-.contact-info {
-  flex: 1;
-}
-
 .contact-form {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.social-media a {
-  padding: 10px 20px;
-    border: 2px solid #7209b7;
-    background: #D0B9EB;
-    color: black;
-    cursor: pointer;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-.social-media a:hover {
-  background-color: purple;
-}
+
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
+  padding: 12px;
+  border-radius: 8px;
   border: none;
-  outline: none;
   background-color: #D0B9EB;
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact-form button {
   padding: 12px;
   border: none;
-  background: #953FE5;
+  background: linear-gradient(135deg, #7209b7, #9d4edd);
   color: white;
-  cursor: pointer;
+  border-radius: 8px;
 }
-
 
 .footer {
   background: #111;
@@ -225,97 +234,11 @@ nav a:hover::after {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
-}
-
-.footer-brand h2 {
-  font-size: 24px;
-}
-
-.footer-brand span {
-  color: #7209b7;
-}
-
-.footer-brand p {
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 10px;
-  max-width: 300px;
-}
-
-.footer-contact p {
-  font-size: 14px;
-  color: #ccc;
 }
 
 .footer-copy {
-  width: 100%;
   text-align: center;
   margin-top: 30px;
-  font-size: 13px;
   color: #777;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-brand p {
-    margin: 10px auto;
-  }
-}
-@media (max-width: 1024px) {
-  .about-skills {
-    padding: 60px 5%;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .container {
-    flex-direction: column;
-  }
-
-  .stats {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .contact-container {
-    flex-direction: column;
-  }
-
-  .hero-text {
-    text-align: center;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .stats {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .social-media {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .btn-primary,
-  .btn-outline {
-    width: 100%;
-  }
 }
