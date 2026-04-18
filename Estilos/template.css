@@ -245,3 +245,131 @@ text-align: center;
 margin-top: 30px;
 color: #777;
 }
+@media (max-width: 1024px) {
+
+  .project-hero {
+    padding: 60px 5%;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .challenge {
+    padding: 60px 5%;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .impact {
+    padding: 60px 5%;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proceso {
+    padding: 60px 5%;
+  }
+
+  .proceso-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 260px;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .numbers {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .proceso-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  nav a {
+    margin: 8px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .project-hero {
+    padding: 40px 5%;
+  }
+
+  .hero-image img {
+    width: 200px;
+  }
+
+  .challenge,
+  .impact,
+  .proceso,
+  .contact {
+    padding: 50px 5%;
+  }
+
+  .numbers {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
